@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Random Number</title>
+</head>
+<body>
+    <p id = "randomNumber"></p>
+    <script>
+        var randomNumber = Math.floor(Math.random()*1000);
+
+        var hundreds = Math.floor(randomNumber / 100);
+        var tens = Math.floor((randomNumber % 100) / 10);
+        var ones = randomNumber % 10;
+
+        var d = new Date(2024, 2, 4, 8, 39, 32);
+
+        document.getElementById("randomNumber").innerHTML = "Randomly generated number: " + randomNumber + "<br>Breakdown: " + hundreds * 100 + 
+        ", " + tens * 10 + ", " + ones + "<br>Current Date and Time: " + d;
+    </script>
+</body>
+</html>
